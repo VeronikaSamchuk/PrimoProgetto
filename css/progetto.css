@@ -1,0 +1,478 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+   margin: 0 auto;
+   font-family: sans-serif;
+  background-color: rgb(27, 26, 26);
+  color: whitesmoke;
+}
+
+header {
+  /* border: solid 1px rgb(49, 49, 49); */
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+   z-index: 999; 
+   margin-bottom: 50px;
+}
+
+header #logo {
+  width: 60px;
+  /* border: solid 1px rgb(190, 32, 32);  */
+  margin: 0;
+  margin-top: 2px;
+  margin-left: 90px;
+  display: inline-block;
+  /* display: flex; */
+}
+
+
+main {
+  max-width: 1300px;
+  margin-left: 30px;
+  margin-top: 72px;
+  /* border: solid 1px red;  */
+  position: relative;
+ 
+ 
+}
+
+/* =========   ANIMATION =====================================================*/
+
+@keyframes ruotaLOGO {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+#icone {
+  animation-name: ruotaLOGO;
+  animation-duration: 4s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+ 
+}
+/*=================================== FINE animation*/
+
+
+/*========= popup login ===================================================================*/
+header>section{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(5, 5, 5, 0.8);
+ display: none;
+  
+}
+header #login{
+  width: 500px;
+ height: 300px;
+ padding: 20px;
+ border: solid 2px rgb(69, 68, 68);
+ z-index: 999;
+ margin-top: 50px;
+ background-color: #212121;
+ color: aliceblue;
+ position: absolute;
+ top: 10px;
+ right: 60px;
+}
+
+
+
+#login>h1{
+  text-align: center;
+  text-decoration:underline;
+  margin: 10px 0 20px;
+  font-size: 1.8em;
+}
+
+#login>p{
+  font-size: 1.5em;
+  text-align: center;
+  margin: 20px;
+
+}
+
+#login>button{
+  width: 40%;
+  height: 50px;
+  margin: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  border: solid 3px rgb(226, 42, 42);;
+}
+
+#login>button:hover{
+  background: rgb(226, 42, 42);
+}
+
+#chiudi{
+  background-image: url(../icone/White.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block; 
+  position: absolute;
+  top: 50px;
+  right:50px;
+  width: 25px;
+  height: 25px; 
+  background-color: rgb(27, 26, 26);
+  border-radius: 50%;
+  z-index: 9999;
+
+} 
+
+
+
+header #logo h3 {
+  color: rgb(247, 95, 105);
+  font-size: 1.1em;
+  /* background-color: aquamarine;  */
+  float: left;
+  margin: 0;
+}
+
+header #icone {
+  max-width: 75%;
+}
+
+header #menu {
+  display: flex;
+  width: 80%;
+  list-style: none;
+  font-size: 1.1em;
+  margin: 5px auto;
+  margin-right: 70px;
+  padding-top: .8em;
+
+}
+
+header #menu li {
+  width: 22%;
+ font-size: 1.2em; 
+}
+
+header #menu a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header #menu a:hover{
+  color: rgb(247, 95, 105);
+  transition: 1s;
+}
+
+header #banner {
+  width: 25px;
+  height: 25px;
+  margin-top: 20px;
+  margin-right: 30px; 
+   background-color: whitesmoke;
+  border-radius: 50%; 
+}
+
+#banner #img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ==========================SLIDER ==============================================*/
+
+#slider {
+  text-align: center;
+  max-width: 1200px;
+  height: 550px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /*scrollbar invisibile*/
+}
+#slider .image {
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover; /* si adatta alla grandezza del box */
+  position: absolute; /*per metterle tutte una sopra l'altro*/
+  left: 100%;
+}
+
+#slider .visibile {
+  left: 0; /*deve eseere scritta dopo .image*/
+  /* transition: 1s; */
+}
+
+#slider .moveLeft {
+  left: -100%;
+  /* transition: 1s; */
+}
+
+#slider .primo {
+  background-image: url(../Img/CAte.jpeg);
+}
+
+#slider .secondo {
+  background-image: url(../Img/drammatico.webp);
+}
+
+#slider .terzo {
+  background-image: url(../Img/barbie-stanley-kubrick.webp);
+}
+
+#slider .quarto {
+  background-image: url(../Img/Film4.webp);
+}
+
+/* ================================================FINE SLIDER */
+
+
+
+/* I FILM========= */
+article {
+  width: 40%;
+  margin: 70px 0 50px 0;
+}
+
+article h1 {
+  color: whitesmoke;
+  margin-bottom: 10px;
+  margin: 3px;
+  font-size: 2em;
+}
+
+article p {
+  color: whitesmoke;
+  font-size: 1.1em;
+  padding: 5px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+section {
+  display: flex;
+  margin-bottom: 60px;
+     
+ 
+}
+h2 {
+  margin-top: 30px;
+  font-size: 1em;
+}
+
+section .second {
+  margin: 5px;
+  /* border-radius: 1%; */
+  position: relative; /*=====================================================================*/
+}
+section .second img {
+  max-width: 100%;
+  border-radius: 1%;
+}
+
+ section .novità {  
+  width: 250px;
+  height: 299px;
+  margin: 5px;
+  background-position: center center;
+  background-size: cover;
+ 
+}
+
+section .primo {
+  background-image: url(../Img/JOker.jpeg);
+ 
+}
+
+section .secondo {
+  background-image: url(../Img/COPERTINA.jpeg);
+}
+
+section .terzo {
+  background-image: url(../Img/harry.jpeg);
+}
+
+section .quarto {
+  background-image: url(../Img/pirati-dei-caraibi.jpeg);
+}
+
+section .quinto {
+  background-image: url(../Img/revenant-redivivo2.jpeg);
+}
+
+section .novità:hover{
+  transform: scale(1.1);
+  transition: 2s;
+}
+/* FINE  */
+/*
+ .second .overlay {
+  position: absolute;
+  bottom: -50px;
+  height: 60px;
+  line-height: 50px;
+  background: rgb(0, 0, 0);  
+  background: rgba(0, 0, 0, 0.6);  
+  color: #f1f1f1;
+  border-radius: 2%;
+  width: 100%; 
+  text-align: center;
+  font-size: .7em;
+ 
+  display: none; 
+ 
+}
+*/
+
+.second:hover .overlay {
+  display: block;
+  transition: 3s;
+} 
+
+/*================================================ POPUP film========================== */
+
+ .Coperta{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; 
+    background-color: rgba(5, 5, 5, 0.6);
+    z-index: 100;
+    display: none;
+    z-index: 9999;
+
+}
+
+.popupFIlm{
+border: solid 3px rgb(24, 24, 24);
+position: absolute;
+top: 0px;
+left: 170px;
+margin: 1% auto;
+width: 900px;
+z-index: 999; 
+}
+
+.popupFIlm .locandina{
+  width: 100%;
+  display: block;
+}
+
+.popupFIlm p{
+  background-color: #212121;
+  font-size: .8em;
+  padding: 8px;
+  line-height: 20px;
+}
+
+.popupFIlm .close{
+  background-image: url(../icone/White.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block; 
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px; 
+  background-color: rgb(27, 26, 26);
+  border-radius: 50%;
+
+} 
+.sfumato{
+  filter: blur(10px);
+}
+
+main>nav>p{
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em; 
+  color:wheat
+
+}
+
+nav>h2{
+  text-align: center;
+  font-size: 1.7em; 
+}
+
+nav>h2>a{
+  text-decoration: none;
+  color: wheat;
+}
+
+nav>h2>a:hover{
+  color: rgb(161, 1, 1);
+  text-decoration: underline;
+}
+
+
+
+footer{
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+ 
+}
+
+footer ul{
+  display: flex;
+  list-style: none;
+  margin: 10px auto;
+  padding: 0;
+  width: 200px;
+
+}
+
+footer ul li{
+  background-image: url(../icone/sprite2.png);
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+ 
+} 
+
+footer ul li:nth-child(1){
+  background-position: 0 0;
+}
+
+footer ul li:nth-child(2) {
+  background-position: -24px 0;
+}
+
+footer ul li:nth-child(3) {
+  background-position: -48px 0;
+}
+
+footer ul li:nth-child(4){
+  background-position: -72px 0;
+}
+
+
+
+/*========== fine popup film============================================================= */
+
+@media screen and (min-width: 700px) {
+ .section {
+  width: 50%;
+   
+  }
+}
